@@ -1,0 +1,4 @@
+
+foreach($sql->fetchAll() as $usuario) {
+    echo "Nome: ".$usuario["nome"]." - ".$usuario["email"]."<br>";
+}
