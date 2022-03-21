@@ -10,7 +10,7 @@
 .container-1 {
     margin-top: 1%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 30%;
     justify-content: center;
     text-align: center;
 
@@ -25,4 +25,10 @@
 
 }
 
+.item3 {
 
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}

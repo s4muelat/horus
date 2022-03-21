@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 .carousel {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +20,7 @@ body {
     align-self: center;
 }
 .box2 {
-    width: 50%;
+    width: 100%;
     align-self: center;
 }
 .box-doc {
@@ -49,19 +49,19 @@ body {
 }
 
 #form-control2 {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #form-control3 {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #submit {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -71,6 +71,9 @@ body {
     width: 100%;
     text-align: center;
 }
+
+
+
 @media (max-width: 1000px){
     .container-pai{
         display: block;
@@ -82,7 +85,7 @@ body {
         margin-right: auto;
     }
 }
-@media (max-width: 500px){
+@media (max-width: 1000px){
     .container-1{
          grid-template-columns: 100%;
     }

@@ -22,7 +22,6 @@ include("../geral/global.php");
     <div class="container-1">        
         <div class="item item2">
             <!-- Carousel início -->
-		    <div class="box1">
 			    <div id="carousel" class="slide carousel" data-bs-ride="carousel">
 				    <ol class="carousel-indicators">
 					    <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -49,27 +48,23 @@ include("../geral/global.php");
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</div>	
-		</div>
+		</span>
 		</div>
         <!-- Carousel fim -->
             
         <!-- Formulário de login -->         
         <div class="item item3">
-		    <div class="box2">
-			    <div class="box-doc">
-				    <div class="box-login">
-					    <form action="/action_page.php" method="get">
-					        <input type="email" id="form-control2" class="form-control btn-lg" id="email"  placeholder="Seu email" checked autocomplete="off">
-					        <br>  
-					        <input type="password" id="form-control3" class="form-control btn-lg" id="senha" placeholder="Senha">
-					        <br>
-					        <div class="box-btn-login">
+				<form action="/action_page.php" method="get">
+					<input type="email" id="form-control2" class="form-control btn-lg" id="email"  placeholder="Seu email" checked autocomplete="off">
+					<br>  
+					<input type="password" id="form-control3" class="form-control btn-lg" id="senha" placeholder="Senha">
+					<br>
+					<div class="box-btn-login">
 						    <input type="submit" id="submit" class="btn btn-warning btn-lg" value="Entrar">
 					        </div>
 						    <div class='AlterarSenha'>Não consigo acesar</div>
 						    <div class='CadastrarMe'>Quero me cadastrar</div>
 					        </form>
-				    </div>		
 			</div>
 		</div>
 		<!-- Fim div box2 -->
