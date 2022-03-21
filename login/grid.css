@@ -1,0 +1,28 @@
+
+.container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container-1 {
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+
+.item {
+    padding: 1%;
+    color: rgb(0, 7, 14);
+
+
+}
+
+
