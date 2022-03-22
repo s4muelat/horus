@@ -3,29 +3,9 @@ body {
     
 }
 
-
-.container-pai {
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-}
 .carousel {
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-.box1 {
-    width: 100%;
-    align-self: center;
-}
-.box2 {
-    width: 100%;
-    align-self: center;
-}
-.box-doc {
-    padding: 5%;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,26 +20,6 @@ body {
     font-size: 14pt;
 }
 
-.titulo {
-    position: absolute;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20pt;
-}
-
-#form-control2 {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#form-control3 {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #submit {
     width: 100%;
     margin-left: auto;
@@ -67,33 +27,8 @@ body {
 }
 
 
-.box-btn-login{
+.box-btn-login {
     width: 100%;
     text-align: center;
 }
 
-
-
-@media (max-width: 1000px){
-    .container-pai{
-        display: block;
-    }
-    .box2 {
-        width: 70%;
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-@media (max-width: 1000px){
-    .container-1{
-         grid-template-columns: 100%;
-    }
-    
-}
-
-/*
-teste1
-
-
-*/
