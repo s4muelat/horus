@@ -21,6 +21,6 @@ if(!empty($_POST['submit'])){
         $_SESSION['senha'] = "$senha";       
         header("Location: ../sistema");
     } else {
-        echo "alert('Dados estão incorretos!');";
+        $_SESSION['errologin'] = "errologin";
     }
 }

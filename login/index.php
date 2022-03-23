@@ -65,11 +65,23 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
         <!-- Form login -->         
         <div class="item item3">
 			<form action="" method="post">
+				<!-- 
 					<div class="alert alert-danger" role="alert">
 					Ops... dados incorretos.	
 				</div>
-			<br>		
-			<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='off' autofocus required maxlength='50'> 
+				-->
+				<!-- Alerta falha login -->
+				<?php
+					if(!empty($_SESSION['errologin']) == 'errorlogin') {
+					echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  					<strong>Ih, deu ruim :(</strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    				<span aria-hidden="true">&times;</span>
+  					</button>
+					</div>';
+					}		
+				?>		
+				<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='off' autofocus required maxlength='50'> 
 				<br>  
 				<input type="password" name='senha' class="form-control btn-lg" id="senha" placeholder="********" required maxlength='8'>
 				<br>
