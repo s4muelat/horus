@@ -5,6 +5,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 	header("Location: ../sistema");
 }
 	include("../geral/global.php");
+	include("aut.php");
 		
 ?>
 <!DOCTYPE html>
@@ -63,7 +64,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
             
         <!-- Form login -->         
         <div class="item item3">
-			<form action="aut.php" method="post">
+			<form action="" method="post">
 					<div class="alert alert-danger" role="alert">
 					Ops... dados incorretos.	
 				</div>
@@ -73,7 +74,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 				<input type="password" name='senha' class="form-control btn-lg" id="senha" placeholder="********" required maxlength='8'>
 				<br>
 				<div class="box-btn-login">
-				    <input type="submit" id="submit" class="btn btn-warning btn-lg" value="Entrar">
+				    <input type="submit" name='submit' id="submit" class="btn btn-warning btn-lg" value="Entrar">
 				</div>	
 				<div class='AlterarSenha'>Esqueceu a senha?</div>
 			</form>
