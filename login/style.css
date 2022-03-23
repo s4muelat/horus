@@ -24,6 +24,7 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
 }
 
 
@@ -32,3 +33,7 @@ body {
     text-align: center;
 }
 
+.form-control:focus {
+    border-color: #d39e00;
+    box-shadow: 0 0 0 0.2rem #d39e00;
+}

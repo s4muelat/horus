@@ -1,7 +1,9 @@
 <?php
-session_start();
-if(isset($_SESION['email']) && empty($_SESSION['email']) == false) {
-    header("Location: sistema/");
-} else {
-    header("Location: aut.php");
-}
+
+session_start();  
+
+if(empty($_SESSION['email']) || empty($_SESSION['senha'])) {
+    header("Location: ../login");
+} 
+    
+

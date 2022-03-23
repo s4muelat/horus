@@ -1,6 +1,11 @@
 <?php
-		include("../geral/global.php");
-		include("valida_sessao.php");
+session_start();  
+
+if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
+	header("Location: ../sistema");
+}
+	include("../geral/global.php");
+		
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,7 +13,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema gerenciador completo para hotéis e pousadas">
-	
 	<link rel='stylesheet' href='grid.css' />
     <link rel='stylesheet' href='style.css' />
     <title>Hórus - entre ou cadastre-se</title>
@@ -21,6 +25,7 @@
         <div class="item item1">
         </div>
     </div>
+	<!-- Topo fim -->
    
     <!--Carousel e login -->
     <div class="container-1">        
@@ -54,23 +59,26 @@
 		</div>	
 		</span>
 		</div>
-        <!-- Carousel fim -->
+        <!-- Carousel e login fim -->
             
-        <!-- Formulário login -->         
+        <!-- Form login -->         
         <div class="item item3">
-				<form action="/action_page.php" method="get">
-					<input type="email" class="form-control btn-lg" id="email"  placeholder="meu@email.com" autofocus required maxlength='50'> 
-					<br>  
-					<input type="password" class="form-control btn-lg" id="senha" placeholder="********" required maxlength='8'>
-					<br>
-					<div class="box-btn-login">
-						    <input type="submit" id="submit" class="btn btn-warning btn-lg" value="Entrar">
-					        </div>
-						    <div class='AlterarSenha'>Esqueci minha senha</div>
-						    </form>
-			</div>
+			<form action="aut.php" method="post">
+					<div class="alert alert-danger" role="alert">
+					Ops... dados incorretos.	
+				</div>
+			<br>		
+			<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='off' autofocus required maxlength='50'> 
+				<br>  
+				<input type="password" name='senha' class="form-control btn-lg" id="senha" placeholder="********" required maxlength='8'>
+				<br>
+				<div class="box-btn-login">
+				    <input type="submit" id="submit" class="btn btn-warning btn-lg" value="Entrar">
+				</div>	
+				<div class='AlterarSenha'>Esqueceu a senha?</div>
+			</form>
 		</div>
-		<!-- Fim div login -->
+		<!-- Form login fim -->
         </div>
     </div>
 </body>
