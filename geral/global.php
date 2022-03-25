@@ -16,3 +16,12 @@ echo '<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 ';
+
+//Define domínio ou IP do sistema
+$dominio_ip_sistema = 'http://127.0.0.1';
+//Diretorio sistema
+$dir_sistema = 'horus/sistema';
+//Login
+$dir_login = 'horus/login';
+//Imagens
+$dir_imagens = 'horus/imagens';

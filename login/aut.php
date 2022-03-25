@@ -1,4 +1,5 @@
 <?php
+include("../geral/global.php");
 
 if(!empty($_POST['submit'])){
     //Dados de acesso ao banco
@@ -19,7 +20,7 @@ if(!empty($_POST['submit'])){
         //Variáveis de sessão
         $_SESSION['email'] = "$email";
         $_SESSION['senha'] = "$senha";       
-        header("Location: ../sistema");
+        header("Location: $dominio_ip_sistema/$dir_sistema");
     } else {
         $_SESSION['errologin'] = "errologin";
     }

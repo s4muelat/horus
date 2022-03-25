@@ -1,12 +1,16 @@
 <?php
-session_start();  
+include("../geral/global.php");
+include("aut.php");
 
+//Verifica se existe sessão ativa, caso contrário, inicia uma nova.
+if (empty($_SESSION)) 
+	session_start();
+
+//Verifica se o usuário está logado
 if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
-	header("Location: ../sistema");
+	header("Location: $dominio_ip_sistema/$dir_sistema");
 }
-	include("../geral/global.php");
-	include("aut.php");
-		
+			
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,10 +21,8 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 	<link rel='stylesheet' href='grid.css' />
     <link rel='stylesheet' href='style.css' />
     <title>Hórus - entre ou cadastre-se</title>
-
 </header>
 <body>
-   
     <!-- Topo -->
     <div class="container">
         <div class="item item1">
@@ -41,6 +43,11 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 				    <div class="carousel-inner">
 					<div class="carousel-item active">
 					<img src="../imagens/login_carousel/g1.jpg" class="w-100">
+					<div class="carousel-caption d-none d-md-block">
+    					<h5>Tenha seu hotel na palma da sua mão</h5>
+    					<p>Acessível de qualquer lugar que tenha conexão de Internet</p>
+  					</div>
+				
 				</div>
 				<div class="carousel-item">
 					<img src="../imagens/login_carousel/g2.jpg" class="w-100">
@@ -73,12 +80,18 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 				<!-- Alerta falha login -->
 				<?php
 					if(!empty($_SESSION['errologin']) == 'errorlogin') {
-					echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  					<strong>Ih, deu ruim :(</strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    				<span aria-hidden="true">&times;</span>
-  					</button>
-					</div>';
+						echo "<div id='botaoalerta' class='alert alert-danger alert-dismissible fade show' role='alert'>
+  						<b>Dados incorretos</b>
+						<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+    					<span aria-hidden='true'>&times;</span>
+  						</button>
+						</div>
+						<script>
+							setTimeout(function() {
+							$('#botaoalerta').remove()
+							}, 10000)
+						</script>";
+						unset($_SESSION['errologin']);
 					}		
 				?>		
 				<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='off' autofocus required maxlength='50'> 
