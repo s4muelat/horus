@@ -1,10 +1,6 @@
 <?php
-include("../geral/global.php");
-include("aut.php");
-
-//Verifica se existe sessão ativa, caso contrário, inicia uma nova.
-if (empty($_SESSION)) 
-	session_start();
+require_once "../geral/global.php";
+require_once "aut.php";
 
 //Verifica se o usuário está logado
 if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
@@ -41,7 +37,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 					    <li data-target="#carousel" data-slide-to="2"></li>
 					    </ol>
 				    <div class="carousel-inner">
-					<div class="carousel-item active">
+					<div class="carousel-item active" data-bs-interval="1000">
 					<img src="../imagens/login_carousel/g1.jpg" class="w-100">
 					<div class="carousel-caption d-none d-md-block">
     					<h5>Tenha seu hotel na palma da sua mão</h5>
@@ -89,7 +85,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 						<script>
 							setTimeout(function() {
 							$('#botaoalerta').remove()
-							}, 10000)
+							}, 5000)
 						</script>";
 						unset($_SESSION['errologin']);
 					}		
@@ -107,5 +103,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 		<!-- Form login fim -->
         </div>
     </div>
+
+	
 </body>
 </html>
