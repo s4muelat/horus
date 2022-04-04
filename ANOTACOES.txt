@@ -2,3 +2,9 @@
 foreach($sql->fetchAll() as $usuario) {
     echo "Nome: ".$usuario["nome"]." - ".$usuario["email"]."<br>";
 }
+
+Login automático javascript
+
+document.getElementById('email').value = 'contatu@live.com';
+document.getElementById('senha').value = '123456';
+document.getElementById('submit').click();

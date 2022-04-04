@@ -1,11 +1,6 @@
 <?php
 require_once "../geral/global.php";
 require_once "aut.php";
-
-//Verifica se o usuário está logado
-if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
-	header("Location: $dominio_ip_sistema/$dir_sistema");
-}
 			
 ?>
 <!DOCTYPE html>
@@ -30,7 +25,7 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
     <div class="container-1">        
         <div class="item item2">
             <!-- Carousel início -->
-			    <div id="carousel" class="slide carousel" data-bs-ride="carousel">
+			    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
 				    <ol class="carousel-indicators">
 					    <li data-target="#carousel" data-slide-to="0" class="active"></li>
 					    <li data-target="#carousel" data-slide-to="1"></li>
@@ -86,16 +81,36 @@ if(!empty($_SESSION['email']) || !empty($_SESSION['senha'])) {
 							setTimeout(function() {
 							$('#botaoalerta').remove()
 							}, 5000)
-						</script>";
+							</script>";
 						unset($_SESSION['errologin']);
-					}		
+					}
+					
+					if(!empty($_SESSION['oklogin']) == 'oklogin') {
+						echo "<div id='botaoalerta' class='alert alert-success alert-dismissible fade show' role='alert'>
+								<div class='spinner-border text-success' role='status'>
+							  </div>
+								<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+    								<span aria-hidden='true'>&times;</span>
+								</button>
+							</div>
+						<script>
+							setTimeout(function() {
+							$('#botaoalerta').remove()
+							window.location.href = '$dominio_ip_sistema/$dir_sistema'
+							}, 2000)						
+						</script>";
+						unset($_SESSION['oklogin']);
+					}
+					
+					
+
 				?>		
-				<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='off' autofocus required maxlength='50'> 
+				<input type="email" name='email' class="form-control btn-lg" id="email"  placeholder="meu@email.com" autocomplete='on' autofocus required maxlength='50'> 
 				<br>  
 				<input type="password" name='senha' class="form-control btn-lg" id="senha" placeholder="********" required maxlength='8'>
 				<br>
 				<div class="box-btn-login">
-				    <input type="submit" name='submit' id="submit" class="btn btn-warning btn-lg" value="Entrar">
+				    <input type="submit" name='submit' id="submit" class="btn" value="Entrar">
 				</div>	
 				<div class='AlterarSenha'>Esqueceu a senha?</div>
 			</form>

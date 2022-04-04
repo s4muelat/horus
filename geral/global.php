@@ -1,10 +1,10 @@
 <?php
-
+// *** Não deletar! Inicia sessão para outros arquivos.
 if (empty($_SESSION))
 	session_start();
 
 //Define domínio ou IP do sistema
-$dominio_ip_sistema = 'http://192.168.18.6';
+$dominio_ip_sistema = 'http://127.0.0.1';
 
 //Diretórios
 $dir_base = 'horus';
@@ -50,6 +50,3 @@ echo "<link rel='stylesheet' href='$dominio_ip_sistema/$dir_base/estilo/global.c
 // Font Roboto Google
 echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">';
-
-
-
