@@ -53,4 +53,4 @@ require_once "../bd/pdo.php";
 
 </body>
 
-</html>
+</html> 

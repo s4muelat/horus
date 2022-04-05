@@ -92,13 +92,13 @@ require_once "aut.php";
 								<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
     								<span aria-hidden='true'>&times;</span>
 								</button>
-							</div>
+							</div>				
 						<script>
 							setTimeout(function() {
-							$('#botaoalerta').remove()
-							window.location.href = '$dominio_ip_sistema/$dir_sistema'
+								$('#botaoalerta').remove()
+								window.location.href = '$dominio_ip_sistema/$dir_sistema'
 							}, 2000)						
-						</script>";
+							</script>";
 						unset($_SESSION['oklogin']);
 					}
 					
