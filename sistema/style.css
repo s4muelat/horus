@@ -1,3 +1,5 @@
-.bg-item-a:hover a{
-    /*background: #fffbea;*/
+#content {
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }

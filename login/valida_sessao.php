@@ -1,6 +1,4 @@
 <?php
-require_once "../geral/global.php";
-
 //Verifica tempo da sessão
 if (isset($_SESSION['start']) && (time() - $_SESSION['start'] > $tempo_sessao)) {
     $valida_sessao_usuario = $_SESSION['nome_usuario'];

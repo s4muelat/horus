@@ -17,7 +17,7 @@ $dir_imagens = 'horus/imagens';
 
 // ------------- Tempo duração da sessão ----------------
 //ATENÇÃO: Tempo em segundos
-$tempo_sessao = '600';
+$tempo_sessao = '6000000000000000000000000000';
 
 // ---> DESATIVADO POR HORA <---
 //Derruba sessão do usuário
@@ -50,3 +50,6 @@ echo "<link rel='stylesheet' href='$dominio_ip_sistema/$dir_base/estilo/global.c
 // Font Roboto Google
 echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
 echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">';
+
+
+echo "<link rel='stylesheet' href='$dominio_ip_sistema/$dir_base/bootstrap-icons-1.8.1/bootstrap-icons.css'>";

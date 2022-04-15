@@ -7,3 +7,8 @@ body {
     background-color: #ffcd11; /* CAT tratores */
     
 }
+
+.form-control:focus {
+    border-color: #d39e00;
+    box-shadow: 0 0 0 0.2rem #d39e00;
+}
