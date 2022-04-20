@@ -33,7 +33,7 @@ require_once "../bd/pdo.php";
       
       <!-- clientes -->
       <li class="nav-item">
-        <a class="nav-link" href='#' onClick='$("#corpo").load("cliente/pesquisa.php")'>Clientes</a>
+        <a class="nav-link" href='#' onClick='$("#corpo").load("clientes/pesquisa/")'>Clientes</a>
       </li>
      
       <!-- Estoque -->

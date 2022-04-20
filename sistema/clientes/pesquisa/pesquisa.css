@@ -1,0 +1,23 @@
+#container {
+    /*background-color: rgb(129, 127, 127);*/
+    align-items: center;
+    width: 50%;
+}
+
+#container2 {
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 75%;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+#pesq_titulo {
+    font-weight: bold;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#pesq_input {
+    margin-top: 5%;    
+}
