@@ -1,3 +1,0 @@
-Jquery - remove elemento
-
-$('#botaoalerta').remove();
